@@ -1,0 +1,26 @@
+### Publish CloudEvent Message
+POST http://localhost:3570/v1.0/publish/messagebus/simple-pub-sub
+Content-Type: application/json
+
+{
+  "MessageId": 1,
+  "MessageText": "Default PubSub"
+}
+
+### Publish Raw Message
+POST http://localhost:3570/v1.0/publish/messagebus/simple-pub-sub-raw?metadata.rawPayload=true
+Content-Type: application/json
+
+{
+  "MessageId": 2,
+  "MessageText": "Raw PubSub"
+}
+
+### Publish Raw Message False
+POST http://localhost:3570/v1.0/publish/messagebus/simple-pub-sub-raw-false?metadata.rawPayload=true
+Content-Type: application/json
+
+{
+  "MessageId": 3,
+  "MessageText": "Raw PubSub False"
+}
